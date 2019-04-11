@@ -1,0 +1,45 @@
+{
+  "name": "slip0010-ed25519",
+  "version": "0.0.1",
+  "description": "implements SLIP-0010 : Universal private key derivation from master private key for ed25519",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "example",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/you21979/node-slip0010-ed25519.git"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "slip-0010"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^9.6.0",
+    "@types/mocha": "^5.0.0",
+    "typescript": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.5"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "./node_modules/.bin/tsc -p ./",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./dist/test",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "author": "Yuki Akiyama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/you21979/node-slip0010-ed25519/issues"
+  },
+  "homepage": "https://github.com/you21979/node-slip0010-ed25519#readme"
+}
